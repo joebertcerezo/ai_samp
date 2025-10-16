@@ -56,7 +56,7 @@ node sample.js
 ├── .env.example      # Environment variable template
 ├── .gitignore
 ├── package.json
-├── sample.js         # Main sample script
+├── index.js         # Main sample script
 └── README.md
 ```
 
