@@ -1,12 +1,13 @@
 # AI_Samp
 
-A secure Node.js sample for interacting with the OpenAI API.
+A secure Node.js sample for interacting with the OpenAI API using TypeScript.
 
 ## Features
 
 - Uses [OpenAI Node.js SDK](https://www.npmjs.com/package/openai)
 - Loads sensitive credentials from environment variables
 - Example of a simple chat completion request
+- Written in TypeScript with strict settings
 - Follows best practices for configuration and dependency management
 
 ## Getting Started
@@ -37,10 +38,17 @@ A secure Node.js sample for interacting with the OpenAI API.
 
 ### Usage
 
-Run the sample script:
+Build and run the sample script:
 
 ```sh
-node sample.js
+npm run dev
+```
+
+Or manually:
+
+```sh
+npx tsc
+node ./dist/index.js
 ```
 
 ## Security Considerations
@@ -48,6 +56,7 @@ node sample.js
 - **Never commit your `.env` file or API keys to version control.**
 - All sensitive configuration is loaded from environment variables.
 - Dependencies are kept up-to-date to minimize vulnerabilities.
+- Avoid logging sensitive data.
 
 ## Project Structure
 
@@ -56,7 +65,9 @@ node sample.js
 ├── .env.example      # Environment variable template
 ├── .gitignore
 ├── package.json
-├── index.js         # Main sample script
+├── tsconfig.json
+├── src/
+│   └── index.ts      # Main sample script (TypeScript)
 └── README.md
 ```
 
@@ -66,3 +77,4 @@ node sample.js
 - Keep dependencies updated and audit regularly.
 - Avoid logging sensitive data.
 - Use `.gitignore` to prevent accidental commits of sensitive files.
+- Use TypeScript strict mode for safer code.
